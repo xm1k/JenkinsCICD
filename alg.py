@@ -1,6 +1,7 @@
 # alg.py
 
 from collections import deque
+from dfs import dfs
 
 def process_input(data: str) -> str:
     """
@@ -20,25 +21,6 @@ def process_input(data: str) -> str:
         return "0\n"
     N, M = map(int, parts[:2])
     nums = list(map(int, parts[2:]))
-    # строим список смежности с учётом петель и кратных рёбер
-    adj = [[] for _ in range(N+1)]
-    for i in range(0, 2*M, 2):
-        u, v = nums[i], nums[i+1]
-        adj[u].append(v)
-        if u != v:
-            adj[v].append(u)
-    # BFS от 1
-    visited = [False] * (N+1)
-    q = deque([1])
-    visited[1] = True
-    comp = []
-    while q:
-        u = q.popleft()
-        comp.append(u)
-        for w in adj[u]:
-            if not visited[w]:
-                visited[w] = True
-                q.append(w)
-    comp.sort()
-    return f"{len(comp)}\n{' '.join(map(str, comp))}"
+    st = dfs(N,M,nums)
+    return st
 
