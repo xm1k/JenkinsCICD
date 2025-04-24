@@ -3,7 +3,6 @@
 from collections import deque
 
 def process_input(data: str) -> str:
-    print(str)
     """
     Ожидает на вход строку вида:
         N M
@@ -41,6 +40,5 @@ def process_input(data: str) -> str:
                 visited[w] = True
                 q.append(w)
     comp.sort()
-    print(f"{len(comp)}\n{' '.join(map(str, comp))}")
     return f"{len(comp)}\n{' '.join(map(str, comp))}"
 
