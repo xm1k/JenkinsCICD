@@ -20,7 +20,7 @@ def test_two_components():
 def test_loop_and_multiedge():
     inp = "3 4\n1 1\n2 3\n2 3\n1 2\n"
     # петля на 1, ребро 1-2, поэтому компонент {1,2}, вершина 3 не достижима
-    assert run(inp) == "2\n1 2"
+    assert run(inp) == "3\n1 2 3"
 
 def test_isolated_vertex():
     inp = "5 0\n"

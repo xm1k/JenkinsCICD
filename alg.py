@@ -41,3 +41,4 @@ def process_input(data: str) -> str:
                 q.append(w)
     comp.sort()
     return f"{len(comp)}\n{' '.join(map(str, comp))}"
+
