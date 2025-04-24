@@ -13,17 +13,17 @@ TEMPLATE = '''
   <title>Компонента связности</title>
 </head>
 <body>
-  <h1>Найдём компоненту связности, содержащую вершину 1</h1>
-  <form method="post">
+<h1>Найдём компоненту связности, содержащую вершину 1</h1>
+<form method="post">
     <textarea name="input_data" rows="10" cols="60" 
       placeholder="Ввод: N M, затем M строк с u v">{{request.form.input_data or ''}}</textarea><br>
     <button type="submit">Вычислить</button>
-  </form>
+</form>
 
-  {% if output %}
-    <h2>Результат:</h2>
-    <pre>{{output}}</pre>
-  {% endif %}
+{% if output %}
+<h2>Результат:</h2>
+<pre>{{output}}</pre>
+{% endif %}
 </body>
 </html>
 '''
