@@ -1,5 +1,6 @@
 # alg.py
 
+from collections import deque
 
 def process_input(data: str) -> str:
     print(str)
