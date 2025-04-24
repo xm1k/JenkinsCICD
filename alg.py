@@ -1,8 +1,8 @@
 # alg.py
 
-from collections import deque
 
 def process_input(data: str) -> str:
+    print(str)
     """
     Ожидает на вход строку вида:
         N M
