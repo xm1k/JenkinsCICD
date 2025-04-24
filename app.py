@@ -10,7 +10,7 @@ TEMPLATE = '''
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <title>Компонента связности</title>
+  <title>Алгосы</title>
 </head>
 <body>
 <h1>Найдём компоненту связности, содержащую вершину 1</h1>
