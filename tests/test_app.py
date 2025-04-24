@@ -22,5 +22,3 @@ def test_post_small_graph(client):
     assert "2" in text.splitlines()[text.splitlines().index("<h2>Результат:</h2>") + 1]
     assert "1" in text
     assert "3" in text
-
-test_post_small_graph(client)
